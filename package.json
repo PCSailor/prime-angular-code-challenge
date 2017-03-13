@@ -1,13 +1,13 @@
 {
   "name": "angular-routing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fork, clone, and run `npm install` to get started.",
   "main": "index.js",
   "scripts": {
     "test": "nodemon server/app.js",
     "start": "node server/app.js"
   },
-  "author": "",
+  "author": "phil curtis",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.3",
@@ -16,5 +16,13 @@
     "bootstrap": "^3.3.7",
     "express": "^4.15.2",
     "pg": "^6.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PCSailor/prime-angular-code-challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PCSailor/prime-angular-code-challenge/issues"
+  },
+  "homepage": "https://github.com/PCSailor/prime-angular-code-challenge#readme"
 }
