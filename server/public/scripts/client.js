@@ -7,6 +7,7 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'HeroListController',
       controllerAs: 'hlc'
     })
+    
     .otherwise({
       redirectTo: 'heroList'
     })

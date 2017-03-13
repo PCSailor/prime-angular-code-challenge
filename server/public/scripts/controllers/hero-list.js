@@ -2,7 +2,8 @@ app.controller('HeroListController', ['$http', function($http){
     console.log('Hero List Controller loaded');
       var self = this; // NOTE: self here = hlc in index.html
       var heroList = { list: [] };
-      // self.newhero = {};  // NOTE: object connected to html form // user entry fields
+      // var heroList = [];
+      self.newhero = {};  // NOTE: object connected to html form // user entry fields
       self.heroList = heroList // NOTE: replaced by array AND this is the required code to bring in the full array
 
       getHero();
@@ -16,11 +17,26 @@ app.controller('HeroListController', ['$http', function($http){
         });
       }
 
+      self.newHero = function() {
+        console.log('client-post exit = ', self.newHero);
+        $http ({
+          method: 'POST',
+          url: '/heroes',
+          data: self.newHero
+        }).then(function(response){
+          getHero();
+          self.newHero = {};
+          console.log('response POST = ', response);
+        });
+      }
+
       self.deleteHero = function(heroToDelete){
         $http({
           method: 'DELETE',
-          url: '/heroes/delete/' + heroToDelete
+          // url: '/heroes/delete/' + heroToDelete
+          url: '/heroes' + heroToDelete
         }).then(function(response){
+          console.log('heroToDelete = ', heroToDelete);
           getHero();
         });
       }
