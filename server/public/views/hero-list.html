@@ -1,2 +1,48 @@
-<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before. 
+<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before.
     Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.</p>
+    <table>
+      <!--
+        <tr>
+          <form id="newEmployeeForm">
+          <form id="newEmployeeForm ng-submit="hlc.addEmployee""><!-- NOTE: need this complete --> -->
+            <!-- NOTE: Submit allows hitting enter at to enter data work, button requires the button click. -->
+            <!-- <td><input ng-model = "ec.addEmployee.Employee_ID" placeholder="Employee_ID"></td>
+            <td><input ng-model = "ec.addEmployee.First_Name" placeholder="First_Name"></td>
+            <td><input ng-model = "ec.addEmployee.Last_Name" placeholder="Last_Name"></td>
+            <td><input ng-model = "ec.addEmployee.Job_Title" placeholder="Job_Title"></td>
+            <td><input ng-model = "ec.addEmployee.Salary_Yearly" placeholder="Salary_Yearly"></td>
+            <td> -->
+            <!-- <input ng-model="ec.addEmployee.employeeData"> -->
+            <!-- <button ng-click="ec.addEmployee()">Add Employee</button>
+            </td>
+            <!-- <td><input ng-model = "ec.addEmployee.status" placeholder="Active/Inactive"></td> -->
+            <!-- <td><button ng-click = "ec.addEmployee()">Add a new Employee</button></td> -->
+            <!-- <label><h4>New Employee Data:     </h4></label> -->
+
+            <!-- <td><button ng-click = "ec.addEmployee()">Add a new Employee</button>
+          </form>
+        </tr> -->
+        <thead>
+        <tr>
+          <th> Persona </th>
+          <th> Alias </th>
+          <th> Power ID </th>
+          <th> Delete </th>
+        </tr>
+      </thead>
+
+      <tbody>
+    <tr ng-repeat="hero in hlc.herolist">
+        <td>{{hero.persona}}</td>
+        <td>{{hero.alias}}</td>
+        <td>{{hero.power_id}}</td>
+        <td><span class="col-xs-1"><button ng-click="hlc.deleteHero(hero.id)" class="btn btn-danger">Delete</button></span></td>
+        <!-- NOTE: Three Buttons: Active/Inactive/Delete -->
+          <!-- <td><span class="col-xs-1" ng-hide="hero.status"><button ng-click="hlc.activeEmployee(hero.id)" class="btn btn-primary">Active</button></span>
+
+          <span class="col-xs-1" ng-show="hero.status"><button ng-click="hlc.inactiveEmployee(hero.id)" class="btn btn-info">Inactive</button></span></td> -->
+
+
+    </tr>
+</tbody>
+    </table>
